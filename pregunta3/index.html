@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta3</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Form de ingreso</h2>
+        <label for="user">user:</label>
+        <input type="text" name="user" id="user" placeholder="user...">
+        <label for="role">role:</label>
+        <select name="role" id="role">
+            <option value="cliente">cliente</option>
+            <option value="admin">admin</option>
+        </select>
+        <br>
+        <br>
+        <label for="passw">password:</label>
+        <input type="text" name="passw" id="passw" placeholder="password...">
+        <br>
+        <br>
+        <button onclick="registerNewUser()">Enviar</button>
+    </div>
+
+    <br>
+
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <br>
+
+    <h3>Nuestros usuarios</h3>
+    <table>
+        <tr>
+            <th>Usuario</th>
+            <th>Contrasena</th>
+            <th>Cliente</th>
+            <th>Existente</th>
+        </tr>
+        <tr>
+            <td>user</td>
+            <td>passw</td>
+            <td>rol</td>
+            <td>existe o no</td>
+
+    </table>
+    <br>
+</body>
+
+</html>
